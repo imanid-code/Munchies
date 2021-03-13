@@ -12,13 +12,13 @@ const API = {
         'Content-Type': 'application/json'
       },
       type: 'POST',
-      url: 'api/restaurant',
+      url: 'api/restaurants',
       data: JSON.stringify(restaurant)
     });
   },
   getRestaurants: function () {
     return $.ajax({
-      url: 'api/restaurant',
+      url: 'api/restaurants',
       type: 'GET'
     });
   },
@@ -32,7 +32,7 @@ const API = {
 
 // refreshRestaurants gets new restaurants from the db and repopulates the list
 const refreshRestaurants = function () {
-  API.getRestaurant().then(function (data) {
+  API.getRestaurants().then(function (data) {
     const $restaurants = data.map(function (restaurant) {
       const $a = $('<a>')
         .text(restaurant.name)
@@ -65,11 +65,10 @@ const handleFormSubmit = function (event) {
   event.preventDefault();
 
   const restaurant = {
-    text: $restaurantText.val().trim(),
+    name: $restaurantText.val().trim(),
     description: $restaurantDescription.val().trim(),
     UserId: window.userId
   };
-
   if (!(restaurant.name && restaurant.description)) {
     alert('You must enter a restaurant name and description!');
     return;
