@@ -12,7 +12,7 @@ CREATE TABLE items (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(30) UNIQUE NOT NULL,
   rating int NOT NULL,
-  restraunt_id INT UNSIGNED NOT NULL,
+  restaurant_id INT UNSIGNED NOT NULL,
   INDEX res_ind (restaurant_id),
   CONSTRAINT fk_restaurant FOREIGN KEY (restaurant_id) REFERENCES restaurant(id) ON DELETE CASCADE
 );
