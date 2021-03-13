@@ -12,5 +12,13 @@ module.exports = function (sequelize, DataTypes) {
     });
   };
 
+  Restaurant.associate = function (models) {
+    Restaurant.hasMany(models.Item, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
+
   return Restaurant;
 };
