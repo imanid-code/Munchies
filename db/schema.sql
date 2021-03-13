@@ -5,7 +5,8 @@ use project2_dev;
 CREATE TABLE restaurant(
     restaurant_id int not null auto_increment primary key,
     restaurant_name varchar(40) NOT NULL,
-    restaurant_rating int not null
+    restaurant_rating int not null,
+    restaurant_discription varchar(150)
 )
 
 CREATE TABLE items (

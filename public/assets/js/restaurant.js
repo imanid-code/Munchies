@@ -69,7 +69,6 @@ const handleFormSubmit = function (event) {
     description: $restaurantDescription.val().trim(),
     UserId: window.userId
   };
-
   if (!(restaurant.name && restaurant.description)) {
     alert('You must enter a restaurant name and description!');
     return;
