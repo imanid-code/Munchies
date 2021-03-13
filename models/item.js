@@ -5,7 +5,7 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.INTEGER,
       validate: {
         len: [0, 5],
-        notNull: true,
+        allowNull: false,
         isInt: true
       }
     }
