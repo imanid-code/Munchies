@@ -17,6 +17,18 @@ module.exports = function (db) {
       db.Restaurant.destroy({ where: { id: req.params.id } }).then(function (dbRestaurant) {
         res.json(dbRestaurant);
       });
+    },
+    // Get all Items for a given restaurant
+    getItems: function (req, res) {
+      db.Item.findAll({ where: { RestaurantId: req.session.passport.restaurant.id } }).then(function (dbItems) {
+        res.json(dbItems);
+      });
+    },
+    // Creates a new Item
+    createItem: function (req, res) {
+      db.Item.create(req.body).then(function (dbItem) {
+        res.json(dbItem);
+      });
     }
   };
 };
