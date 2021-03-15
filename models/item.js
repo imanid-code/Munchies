@@ -1,5 +1,3 @@
-const restaurant = require("./restaurant");
-
 module.exports = function (sequelize, DataTypes) {
   const Item = sequelize.define('Item', {
     name: DataTypes.STRING,
