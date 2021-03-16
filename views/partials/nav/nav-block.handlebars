@@ -2,6 +2,8 @@
   <!-- Brand/logo -->
   <a class="navbar-brand" href="/">
     AppName
+  <a class="navbar-brand" style="text-align: center; color:lightblue; margin-left: 420px;" href="/">
+    Munchies
   </a>
   
   <!-- Links -->
@@ -14,19 +16,20 @@
     {{#if isloggedin}}
       <li class="nav-item">
         <a class="nav-link" href="/example">Example page</a>
+        <a class="nav-link" href="/restaurant" style="color:lightblue">Restaurant page</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/profile">My Profile</a>
+        <a class="nav-link" href="/profile" style="color:lightblue">My Profile</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/logout">Logout</a>
+        <a class="nav-link" href="/logout" style="color:lightblue">Logout</a>
       </li>
     {{else}}
       <li class="nav-item">
-        <a class="nav-link" href="#" id="login-modal">Login</a>
+        <a class="nav-link" href="#" id="login-modal" style="color:lightblue">Login</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/register" data-register={{register}}>Register</a>
+        <a class="nav-link" href="/register" style="color:lightblue" data-register={{register}}>Register</a>
       </li>
     {{/if}}
   </ul>

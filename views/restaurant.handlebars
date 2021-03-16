@@ -1,0 +1,43 @@
+{{> nav/nav-block}}
+
+<div id="home">
+  <div class="container">
+    <div class="row">
+      <div class="col-8 offset-2">
+        <h2>{{msg}}</h2>
+        <form class="clearfix mb-4" action="POST">
+          <div class="form-group">
+            <br>
+            <br>
+            <h2>Add New Restaurant</h2>
+            <label for="restaurant-name" style="margin-right: 20px;">Restaurant Name</label>
+            <input type="text" id="foodsearch" class="form-control" aria-describedby="restaurant-name" placeholder="Search Food" style=" margin-left: -200px; width:30%;">
+            <input type="text" id="restaurant-name" class="form-control" aria-describedby="restaurant-name" placeholder="Enter restaurant name" style="margin-top: -40px;">
+          </div>
+          <div class="form-group">
+            <label for="restaurant-description">Restaurant Description</label>
+            <textarea class="form-control" id="restaurant-description" aria-describedby="restaurant-description" placeholder="Enter restaurant description"></textarea>
+          </div>
+          <button id="submit" class="btn btn-primary float-right">Submit</button>
+        </form>
+        <h4>Restaurants belonging to this user:</h4>
+        <ul id="restaurant-list" class="list-group">
+          {{#each restaurants}}
+          <li data-id="{{this.id}}" class="list-group-item">
+            <a href="restaurant/{{this.id}}">{{this.name}}</a>
+            <button class="btn btn-danger float-right delete">ｘ</button>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/assets/js/restaurant.js"></script>
+
+{{> modal/login-block}}
+
+<script>
+  var userId = {{userInfo.id}};
+</script>

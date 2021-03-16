@@ -1,8 +1,14 @@
 body {
   background-image: url("pexels-emiliano-arano-3608311.jpg");
 }
+#home{
+  margin-right: -20px;
+}
+.form-group{
+  margin-right: 50px;
+}
 
-.col-4{
+/* .col-4{
   border: 2px solid yellow;
   padding-left: 50px;
   background-color: red;
@@ -86,4 +92,4 @@ box{
   padding-bottom: 50px;
   margin-top: 50px;
   padding-right: 10px;
-}
+} */
