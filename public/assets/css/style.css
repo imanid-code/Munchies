@@ -7,6 +7,15 @@ body {
 .form-group{
   margin-right: 50px;
 }
+.navbar .nav-item .nav-link {
+  color:lightblue;
+}
+
+.navbar .navbar-brand {
+  text-align: center;
+  color:lightblue;
+  padding-left: 300px;
+}
 
 /* .col-4{
   border: 2px solid yellow;
