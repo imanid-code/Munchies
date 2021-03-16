@@ -1,0 +1,35 @@
+{{> nav/nav-block}}
+
+<div class="container">
+  <div class="row">
+    <div class="col-8 offset-2">
+      <div class="card mt-4">
+        <div class="card-body">
+          <h5 class="card-title">Restaurant</h5>
+          <p>
+            <strong>ID</strong>: {{restaurant.id}}</p>
+          <p>
+          <p>
+            <strong>Name</strong>: {{restaurant.name}}</p>
+          <p>
+            <strong>Description:</strong> {{restaurant.description}}</p>
+          <p>
+            <a href="/restaurant">← Back To Home</a>
+        </div>
+      </div>
+      <h4>Your favorite items:</h4>
+        <ul id="item-list" class="list-group">
+          {{#each items}}
+          <li data-id="{{this.id}}" class="list-group-item">
+            <span>{{this.name}}</span>
+            <br>
+            <span>{{this.rating}}/5</span>
+            <button class="btn btn-danger float-right delete">ｘ</button>
+          </li>
+          {{/each}}
+        </ul>
+    </div>
+  </div>
+</div>
+
+{{> modal/login-block}}
