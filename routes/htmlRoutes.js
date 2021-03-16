@@ -76,11 +76,14 @@ module.exports = (db) => {
   router.get('/restaurant/:id', function (req, res) {
     if (req.isAuthenticated()) {
       db.Restaurant.findOne({ where: { id: req.params.id }, raw: true }).then(function (dbRestaurant) {
-        res.render('restaurant-detail', {
-          userInfo: req.session.passport.user,
-          isloggedin: req.isAuthenticated(),
-          restaurant: dbRestaurant
-        });
+        db.Item.findAll({ where: { RestaurantId: dbRestaurant.id }, raw: true }).then((dbItems => {
+          res.render('restaurant-detail', {
+            userInfo: req.session.passport.user,
+            isloggedin: req.isAuthenticated(),
+            restaurant: dbRestaurant,
+            items: dbItems
+          });
+        }));
       });
     } else {
       res.redirect('/');

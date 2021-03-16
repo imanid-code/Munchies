@@ -14,13 +14,20 @@
           <p>
             <strong>Description:</strong> {{restaurant.description}}</p>
           <p>
-          <strong>Food:</strong> {{restaurant.food}}</p>
-          <p>
-          <strong>Drink:</strong> {{restaurant.drink}}</p>
-
             <a href="/restaurant">← Back To Home</a>
         </div>
       </div>
+      <h4>Your favorite items:</h4>
+        <ul id="item-list" class="list-group">
+          {{#each items}}
+          <li data-id="{{this.id}}" class="list-group-item">
+            <span>{{this.name}}</span>
+            <br>
+            <span>{{this.rating}}/5</span>
+            <button class="btn btn-danger float-right delete">ｘ</button>
+          </li>
+          {{/each}}
+        </ul>
     </div>
   </div>
 </div>
