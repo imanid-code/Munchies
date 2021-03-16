@@ -2,7 +2,11 @@
 
 <div id="main-container" class="container">
   <div class="jumbotron text-center header-wrap" align="center">
+
+    <p class="lead" style="color: blue;">Welcome to <strong>Sample App</strong></p>
+
     <p class="lead">Welcome to <strong>Munchies</strong></p>
+
     <hr class="my-4">
     <div>
       {{#if isloggedin}}
@@ -11,7 +15,11 @@
         <br>
         <a href="/logout"> <button type="btn" class="btn">Logout</button></a>
       {{else}}
+
+        <p style="color: blue;">You need to log in to use this app.</p>
+
         <p>Please log in or Create a new account</p>
+
       {{/if}}
       <h5 id="login-err-msg"></h5>
     </div>
