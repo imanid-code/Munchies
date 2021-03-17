@@ -7,6 +7,18 @@ body {
 .form-group{
   margin-right: 50px;
 }
+.restaurantdetails {
+  background-image: url("../img/restaurantdetailbackground.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.linkbtn {
+  color:lightblue;
+}
+
+.rowcenter {
+  margin-top: 25%;
+}
 
 /* .col-4{
   border: 2px solid yellow;
