@@ -1,35 +1,67 @@
 {{> nav/nav-block}}
 
-<div class="container">
-  <div class="row">
-    <div class="col-8 offset-2">
-      <div class="card mt-4">
-        <div class="card-body">
-          <h5 class="card-title">Restaurant</h5>
-          <p>
-            <strong>ID</strong>: {{restaurant.id}}</p>
-          <p>
-          <p>
-            <strong>Name</strong>: {{restaurant.name}}</p>
-          <p>
-            <strong>Description:</strong> {{restaurant.description}}</p>
-          <p>
-            <a href="/restaurant">← Back To Home</a>
+<body class="restaurantdetails">
+
+  <div class="container">
+    <div class="row rowcenter pt-5 pl-5">
+
+      <div class="col-4">
+        <div class="card border-dark mt-4">
+          <div class="card-header bg-dark text-center" style="color:lightblue"><h4>Favorite Foods & Drinks</h4></div>
+            <div class="card-body">          
+              <ul id="item-list" class="list-group">
+                {{#each items}}
+                <li data-id="{{this.id}}" class="list-group-item">
+                  <span>{{this.name}}</span>
+                  <br>
+                  <span>{{this.rating}}/5</span>
+                  <button class="btn btn-danger float-end delete">ｘ</button>
+                </li>
+                {{/each}}
+              </ul>
+          </div>
         </div>
       </div>
-      <h4>Your favorite items:</h4>
-        <ul id="item-list" class="list-group">
-          {{#each items}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <span>{{this.name}}</span>
-            <br>
-            <span>{{this.rating}}/5</span>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
+      
+      <div class="col-4">
+        <div class="card border-dark mt-4">
+          <div class="card-header bg-dark text-center" style="color:lightblue"><h4>Restaurant</h4></div>
+            <div class="card-body">          
+              <p>
+                <strong>ID</strong>: {{restaurant.id}}</p>
+              <p>
+                <strong>Name</strong>: {{restaurant.name}}</p>
+              <p>
+                <strong>Description:</strong> {{restaurant.description}}</p>
+              <p>
+            </div>
+        </div>
+      </div>
+{{!--  --}}
+        <div class="col-4">
+          <div class="card border-dark mt-4">
+            <div class="card-header bg-dark text-center" style="color:lightblue"><h4>Search</h4></div>
+              <div class="card-body">          
+                <form id="create-form" class="text-center p-3">
+                  <div class="input-group mb-3">
+                      <input type="text" class="form-control" placeholder="Seach your favorites here...">
+                  </div>
+                      <button class="btn bg-dark" style="color:lightblue">Click to search!</button>
+                </form>
+              </div>
+          </div>      
+        </div>
+
     </div>
   </div>
-</div>
 
+  <div class="text-center pt-5 pl-5">
+      <button class="btn btn-lg bg-dark" type="submit" style="color:lightblue">
+      <a href="/restaurant"><div class="linkbtn">Back to Restaurant Page</div></a>
+      </button>
+  </div>
+
+</body>
+
+<script src="/assets/js/restaurant-detail.js"></script>
 {{> modal/login-block}}
