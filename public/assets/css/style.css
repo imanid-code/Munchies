@@ -16,12 +16,9 @@ body {
 .linkbtn {
   color:lightblue;
 }
-
-.rowcenter {
-  margin-top: 25%;
   
 .navbar .nav-item .nav-link {
-  color:lightblue;
+  color: lightblue;
 }
 
 .navbar .navbar-brand {

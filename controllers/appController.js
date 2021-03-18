@@ -20,13 +20,19 @@ module.exports = function (db) {
     },
     // Get all Items for a given restaurant
     getItems: function (req, res) {
-      db.Item.findAll({ where: { RestaurantId: req.session.passport.restaurant.id } }).then(function (dbItems) {
+      db.Item.findAll({ where: { RestaurantId: req.params.restaurantid } }).then(function (dbItems) {
         res.json(dbItems);
       });
     },
     // Creates a new Item
     createItem: function (req, res) {
       db.Item.create(req.body).then(function (dbItem) {
+        res.json(dbItem);
+      });
+    },
+    // Deletes the item with the given id
+    deleteItem: function (req, res) {
+      db.Item.destroy({ where: { id: req.params.id } }).then(function (dbItem) {
         res.json(dbItem);
       });
     }
