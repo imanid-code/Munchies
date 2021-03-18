@@ -16,7 +16,14 @@ body {
 .linkbtn {
   color:lightblue;
 }
+<<<<<<< HEAD
   
+=======
+
+.rowcenter {
+  margin-top: 25%;
+}
+>>>>>>> 160648772a6a7c9931d402dde7f5fd61b34d1ab9
 .navbar .nav-item .nav-link {
   color: lightblue;
 }
@@ -26,89 +33,3 @@ body {
   color:lightblue;
   padding-left: 300px;
 }
-
-/* .col-4{
-  border: 2px solid yellow;
-  padding-left: 50px;
-  background-color: red;
-  margin-left: 240px;
-  background-color: lightgray;
-  margin-top: -30px;
-  margin-left: 10px;
-  border: 2px solid yellow; height: 90vh;
-  padding-top: 10px;
-  font-size: 20px;
-  color: yellow;
-}
-.jumbotron{
-  background-color: lightgray;
-  color: yellow;
-}
-.dashBoard{
-  text-align: center;
-  background-color: lightgray;
-}
-h2{
-  text-align: center;
-}
-
-#favmeal{
-  margin-top: 20px;
-  margin-bottom: 50px; 
-  padding-right: 20px;
-  margin-left: 10px;
-}
-
-#favdrink{
-  margin-top: 20px;
-  margin-bottom: 50px; 
-  margin-left: 10px;
-  padding-right: 20px;
-}
-#history{
-  margin-top: 20px;
-  margin-bottom: 50px; 
-  margin-left: 10px;
-  padding-right: 20px;
-}
-
-#bycity{
-  margin-top: 20px;
-  margin-bottom: 50px; 
-  margin-left: 10px;
-  padding-right: 20px;
-}
-
-#nearby{
-  
-  margin-left: 25px;
-
-  
-
-}
-
-#favsearch{
-  margin-left: 50px;
-}
-
-.col-6{
-  border: 2px solid yellow;
-  margin-left: 530px;
-  background-color: lightgray;
-  padding-right: 20px;
-  margin-top: -300px;
-  margin-bottom: 0px;
- width: 100%;
-
-}
-
-box{
-  border: 2px solid yellow;
-  font-size: 20px;
-  margin-right: 50px;
-  margin-left: 70px;
-  background-color: yellow;
-  padding-bottom: 50px;
-  margin-top: 50px;
-  padding-right: 10px;
-} */
