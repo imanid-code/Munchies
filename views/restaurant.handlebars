@@ -4,21 +4,21 @@
   <div class="container">
     <div class="row">
       <div class="col-8 offset-2">
-        <h2>{{msg}}</h2>
+        <h2 style="color: brown; text-align:center; font-size: 50px">{{msg}}</h2>
         <form class="clearfix mb-4" action="POST">
           <div class="form-group">
-            <h2>Add A New Restaurant</h2>
-            <label for="restaurant-name">Restaurant Name:</label>
+            <h2 style="color: brown; font-size: 40px; text-align:center">Add A New Restaurant</h2>
+            <label style="color: brown; font-size: 25px;" for="restaurant-name"><b>Restaurant Name:</b></label>
             <input type="text" id="restaurant-name" class="form-control" aria-describedby="restaurant-name" placeholder="Enter restaurant name">
           </div>
           <div class="form-group">
-            <label for="restaurant-description">Restaurant Description:</label>
+            <label style="color: brown; font-size: 25px;" for="restaurant-description"><b>Restaurant Description:</b></label>
 
             <textarea class="form-control" id="restaurant-description" aria-describedby="restaurant-description" placeholder="Enter restaurant description"></textarea>
           </div>
           <button id="submit" class="btn btn-primary float-right">Submit</button>
         </form>
-        <h4>Restaurants belonging to this user:</h4>
+        <h4 id="belong">Restaurants belonging to this user:</h4>
         <ul id="restaurant-list" class="list-group">
           {{#each restaurants}}
           <li data-id="{{this.id}}" class="list-group-item">

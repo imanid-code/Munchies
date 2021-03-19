@@ -29,3 +29,15 @@ body {
   color:lightblue;
   padding-left: 300px;
 }
+
+
+#home{
+  background-image: url(../img/restaurantpage.png);
+}
+
+#belong{
+  color: brown;
+  font-weight: 800;
+font-size: 40px;
+}
+
