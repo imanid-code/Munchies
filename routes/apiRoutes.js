@@ -20,6 +20,7 @@ module.exports = (passport, db) => {
   router.get('/items/:restaurantid', AppController.getItems);
   router.post('/items', AppController.createItem);
   router.delete('/items/:id', AppController.deleteItem);
+  router.get('/items/search/:name', AppController.getSearchedItem);
 
   return router;
 };
