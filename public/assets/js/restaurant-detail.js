@@ -32,7 +32,7 @@ const API = {
 
 // refreshitems gets new items from the db and repopulates the list
 const refreshItems = function () {
-  const id = $('#item-list').data('restaurantId');
+  const id = window.restaurantId;
   API.getItems(id).then(function (data) {
     const $items = data.map(function (item) {
       const $name = $('<span>')
@@ -73,11 +73,11 @@ const handleFormSubmit = function (event) {
 
   const item = {
     name: $itemName.val().trim(),
-    description: $itemRating.val().trim(),
-    UserId: window.userId
+    rating: $itemRating.val().trim(),
+    RestaurantId: window.restaurantId
   };
-  if (!(item.name && item.description)) {
-    alert('You must enter a item name and description!');
+  if (!(item.name && item.rating)) {
+    alert('You must enter an item name and rating!');
     return;
   }
 
