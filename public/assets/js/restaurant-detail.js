@@ -3,6 +3,8 @@ const $itemName = $('#item-name');
 const $itemRating = $('#item-rating');
 const $submitBtn = $('#create-submit');
 const $itemList = $('#item-list');
+const $searchInput = $('#search-input');
+const $searchBtn = $('#search-submit');
 
 // The API object contains methods for each kind of request we'll make
 const API = {
@@ -27,12 +29,19 @@ const API = {
       url: '/api/items/' + id,
       type: 'DELETE'
     });
+  },
+  searchItem: function (name) {
+    return $.ajax({
+      url: '/api/items/search/' + name,
+      type: 'GET'
+    });
   }
 };
 
 // refreshitems gets new items from the db and repopulates the list
 const refreshItems = function () {
   const id = window.restaurantId;
+
   API.getItems(id).then(function (data) {
     const $items = data.map(function (item) {
       const $name = $('<span>')
@@ -91,7 +100,9 @@ const handleFormSubmit = function (event) {
 
 // handleDeleteBtnClick is called when an item's delete button is clicked
 // Remove the item from the db and refresh the list
-const handleDeleteBtnClick = function () {
+const handleDeleteBtnClick = function (event) {
+  event.preventDefault();
+
   const idToDelete = $(this).parent().attr('data-id');
 
   API.deleteItem(idToDelete).then(function () {
@@ -99,6 +110,19 @@ const handleDeleteBtnClick = function () {
   });
 };
 
+const handleSearchBtnClick = function (event) {
+  event.preventDefault();
+
+  // TODO: add a .toLowerCase() and make SQL search ignore case
+  const name = $searchInput.val().trim();
+
+  API.searchItem(name).then(function (results) {
+    // TODO: Make results render as the only item in the item list
+    console.log(results);
+  });
+};
+
 // Add event listeners to the submit and delete buttons
 $submitBtn.on('click', handleFormSubmit);
 $itemList.on('click', '.delete', handleDeleteBtnClick);
+$searchBtn.on('click', handleSearchBtnClick);
