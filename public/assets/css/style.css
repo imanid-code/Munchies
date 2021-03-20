@@ -16,7 +16,11 @@ body {
 .linkbtn {
   color:lightblue;
 }
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> ddddb59c2e600ec1ad95c77a3612fbd4009804ae
 .navbar .nav-item .nav-link {
   color: lightblue;
 }
@@ -26,3 +30,15 @@ body {
   color:lightblue;
   padding-left: 300px;
 }
+
+
+#home{
+  background-image: url(../img/restaurantpage.png);
+}
+
+#belong{
+  color: brown;
+  font-weight: 800;
+font-size: 40px;
+}
+
