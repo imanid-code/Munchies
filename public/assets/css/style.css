@@ -1,48 +1,55 @@
 body {
   background-image: url("pexels-emiliano-arano-3608311.jpg");
 }
-#home{
+
+#home {
   margin-right: -20px;
+  background-image: url(../img/restaurantpage.png);
 }
-.form-group{
+
+.form-group {
   margin-right: 50px;
 }
+
 .restaurantdetails {
   background-image: url("../img/restaurantdetailbackground.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .linkbtn {
-  color:lightblue;
+  color: lightblue;
 }
+
 .navbar .nav-item .nav-link {
   color: lightblue;
 }
+
 .navbar .navbar-brand {
   text-align: center;
   color:lightblue;
-  padding-left: 300px;
+  font-size: 30px;
 }
-#home{
-  background-image: url(../img/restaurantpage.png);
-}
-#belong{
+
+#belong {
   color: brown;
   font-weight: 800;
   font-size: 40px;
 }
 
-.jumbotron{
+.jumbotron {
   background-image: url("../img/homeimg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
-.lead{
+
+.lead {
   font-weight: bold;
   color: lightblue;
   font-size: 70px;
 }
-.log{
+
+.log {
   font-weight: bold;
   font-size: 30px;
   color: blue;
