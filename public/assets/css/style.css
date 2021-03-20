@@ -35,6 +35,21 @@ body {
 #belong{
   color: brown;
   font-weight: 800;
-font-size: 40px;
+  font-size: 40px;
 }
 
+.jumbotron{
+  background-image: url("../img/homeimg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.lead{
+  font-weight: bold;
+  color: lightblue;
+  font-size: 70px;
+}
+.log{
+  font-weight: bold;
+  font-size: 30px;
+  color: blue;
+}
