@@ -26,11 +26,13 @@ body {
 
 .navbar .nav-item .nav-link {
   color: lightblue;
+  font-size: 20px;
 }
 
 .navbar .navbar-brand {
   text-align: center;
   color:lightblue;
+  font-size: 40px;
 }
 
 #belong {
@@ -40,21 +42,24 @@ body {
 }
 
 .jumbotron {
+  margin-top: 105px;
   background-image: url("../img/homeimg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  border: 12px solid lightblue;
 }
 
 .lead {
+  margin-top: 60px;
   font-weight: bold;
   color: lightblue;
-  font-size: 70px;
+  font-size: 60px;
 }
 
 .log {
   font-weight: bold;
   font-size: 30px;
-  color: blue;
+  color: lightblue;
 }
 
 .mainBody{

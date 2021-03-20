@@ -84,7 +84,8 @@ const handleFormSubmit = function (event) {
 
 // handleDeleteBtnClick is called when an restaurant's delete button is clicked
 // Remove the restaurant from the db and refresh the list
-const handleDeleteBtnClick = function () {
+const handleDeleteBtnClick = function (event) {
+  event.preventDefault();
   const idToDelete = $(this).parent().attr('data-id');
 
   API.deleteRestaurant(idToDelete).then(function () {
