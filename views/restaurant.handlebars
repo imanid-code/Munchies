@@ -20,10 +20,8 @@
           </div>
           <button id="submit" class="btn btn-primary float-right">Submit</button>
         </form>
-        <br>
-        <br>
-        <br>
-          <h4 id="belong">Restaurants belonging to this user:</h4>
+        <div>
+          <h4 id="belong">Saved Restaurants:</h4>
           <ul id="restaurant-list" class="list-group">
             {{#each restaurants}}
             <li data-id="{{this.id}}" class="list-group-item">

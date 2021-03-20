@@ -7,6 +7,7 @@ body {
   background-image: url(../img/restaurantpage.png);
   background-size: cover;
   background-repeat: no-repeat;
+  padding-bottom: 170px;
 }
 
 .form-group {
@@ -30,7 +31,6 @@ body {
 .navbar .navbar-brand {
   text-align: center;
   color:lightblue;
-  font-size: 30px;
 }
 
 #belong {
