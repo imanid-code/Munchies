@@ -7,7 +7,6 @@ body {
 .form-group{
   margin-right: 50px;
 }
-
 .restaurantdetails {
   background-image: url("../img/restaurantdetailbackground.jpeg");
   background-size: cover;
@@ -16,22 +15,17 @@ body {
 .linkbtn {
   color:lightblue;
 }
-
 .navbar .nav-item .nav-link {
   color: lightblue;
 }
-
 .navbar .navbar-brand {
   text-align: center;
   color:lightblue;
   padding-left: 300px;
 }
-
-
 #home{
   background-image: url(../img/restaurantpage.png);
 }
-
 #belong{
   color: brown;
   font-weight: 800;
