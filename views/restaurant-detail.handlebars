@@ -9,7 +9,7 @@
         <div class="card border-dark mt-4">
           <div class="card-header bg-dark text-center" style="color:lightblue"><h4>Favorite Foods & Drinks</h4></div>
             <div class="card-body">          
-              <ul id="item-list" class="list-group">
+              <ul id="item-list" data-restaurant-id="{{restaurant.id}}" class="list-group">
                 {{#each items}}
                 <li data-id="{{this.id}}" class="list-group-item">
                   <span>{{this.name}}</span>
@@ -26,9 +26,7 @@
       <div class="col-4">
         <div class="card border-dark mt-4">
           <div class="card-header bg-dark text-center" style="color:lightblue"><h4>Restaurant</h4></div>
-            <div class="card-body">          
-              <p>
-                <strong>ID</strong>: {{restaurant.id}}</p>
+            <div class="card-body">
               <p>
                 <strong>Name</strong>: {{restaurant.name}}</p>
               <p>
@@ -37,7 +35,7 @@
             </div>
         </div>
       </div>
-{{!--  --}}
+
         <div class="col-4">
           <div class="card border-dark mt-4">
             <div class="card-header bg-dark text-center" style="color:lightblue"><h4>Search</h4></div>
