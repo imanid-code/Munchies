@@ -1,6 +1,6 @@
 {{> nav/nav-block}}
 
-<div id="home">
+<body id="home">
   <div class="container">
     <div class="row">
       <div class="col-8 offset-2">
@@ -17,7 +17,7 @@
           </div>
           <button id="submit" class="btn btn-primary float-right">Submit</button>
         </form>
-        <h4 id="belong">Restaurants belonging to this user:</h4>
+        <h4 id="belong">Saved Restaurants:</h4>
         <ul id="restaurant-list" class="list-group">
           {{#each restaurants}}
           <li data-id="{{this.id}}" class="list-group-item">
@@ -29,7 +29,7 @@
       </div>
     </div>
   </div>
-</div>
+</body>
 
 <script src="/assets/js/restaurant.js"></script>
 

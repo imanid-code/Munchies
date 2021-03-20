@@ -30,6 +30,8 @@ body {
 
 #home{
   background-image: url(../img/restaurantpage.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #belong{
