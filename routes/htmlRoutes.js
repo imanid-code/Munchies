@@ -77,7 +77,7 @@ module.exports = (db) => {
       db.Restaurant.findOne({ where: { id: req.params.id }, raw: true }).then(function (dbRestaurant) {
         db.Item.findAll({ where: { RestaurantId: dbRestaurant.id }, raw: true }).then(dbItems => {
           res.render('restaurant-detail', {
-            userInfo: req.session.passport.user,
+            restaurantId: req.params.id,
             isloggedin: req.isAuthenticated(),
             restaurant: dbRestaurant,
             items: dbItems

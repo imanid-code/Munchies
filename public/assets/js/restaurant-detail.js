@@ -71,12 +71,14 @@ const refreshItems = function () {
 const handleFormSubmit = function (event) {
   event.preventDefault();
 
+  console.log('restaurantId: ' + window.restaurantId);
+
   const item = {
     name: $itemName.val().trim(),
-    description: $itemRating.val().trim(),
-    UserId: window.userId
+    rating: $itemRating.val().trim(),
+    RestaurantId: window.restaurantId
   };
-  if (!(item.name && item.description)) {
+  if (!(item.name && item.rating)) {
     alert('You must enter a item name and description!');
     return;
   }

@@ -23,7 +23,7 @@
                     </select>
                   <br>
                   <br>
-                  <button class="btn bg-dark text-center" style="color:lightblue" id="item-name">Add to favorites!</button>
+                  <button class="btn bg-dark text-center" style="color:lightblue" id="create-submit">Add to favorites!</button>
                 </div>
               </form>              
                 <ul id="item-list" class="list-group">
@@ -63,7 +63,7 @@
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="Seach your favorites here...">
                 </div>
-                    <button class="btn bg-dark" style="color:lightblue" id="create-submit">Click to search!</button>
+                    <button class="btn bg-dark" style="color:lightblue">Click to search!</button>
               </form>
             </div>
         </div>      
@@ -82,3 +82,7 @@
 
 <script src="/assets/js/restaurant-detail.js"></script>
 {{> modal/login-block}}
+
+<script>
+  var restaurantId = {{ restaurantId }};
+</script>
