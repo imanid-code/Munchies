@@ -5,20 +5,37 @@
   <div class="container">
     <div class="row rowcenter pt-5 pl-5">
 
-      <div class="col-4">
+     <div class="col-4">
         <div class="card border-dark mt-4">
           <div class="card-header bg-dark text-center" style="color:lightblue"><h4>Favorite Foods & Drinks</h4></div>
-            <div class="card-body">          
-              <ul id="item-list" data-restaurant-id="{{restaurant.id}}" class="list-group">
-                {{#each items}}
-                <li data-id="{{this.id}}" class="list-group-item">
-                  <span>{{this.name}}</span>
+            <div class="card-body"> 
+              <form id="create-form" class="text-center">
+                <div class="form-group">                  
+                  <input placeholder="Food or Drink Name..." type="text" class="form-control" id="item-name">
+                  <br> 
+                    <select class="custom-select" id="item-rating">
+                      <option value="">Select Rating...</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
                   <br>
-                  <span>{{this.rating}}/5</span>
-                  <button class="btn btn-danger float-end delete">ｘ</button>
-                </li>
-                {{/each}}
-              </ul>
+                  <br>
+                  <button class="btn bg-dark text-center" style="color:lightblue" id="item-name">Add to favorites!</button>
+                </div>
+              </form>              
+                <ul id="item-list" class="list-group">
+                  {{#each items}}
+                  <li data-id="{{this.id}}" class="list-group-item">
+                    <span>{{this.name}}</span>
+                    <br>
+                    <span>{{this.rating}}/5</span>
+                    <button class="btn btn-danger float-end delete">ｘ</button>
+                  </li>
+                  {{/each}}
+                </ul>
           </div>
         </div>
       </div>
@@ -26,7 +43,9 @@
       <div class="col-4">
         <div class="card border-dark mt-4">
           <div class="card-header bg-dark text-center" style="color:lightblue"><h4>Restaurant</h4></div>
-            <div class="card-body">
+            <div class="card-body">          
+              <p>
+                <strong>ID</strong>: {{restaurant.id}}</p>
               <p>
                 <strong>Name</strong>: {{restaurant.name}}</p>
               <p>
@@ -35,20 +54,20 @@
             </div>
         </div>
       </div>
-
-        <div class="col-4">
-          <div class="card border-dark mt-4">
-            <div class="card-header bg-dark text-center" style="color:lightblue"><h4>Search</h4></div>
-              <div class="card-body">          
-                <form id="create-form" class="text-center p-3">
-                  <div class="input-group mb-3">
-                      <input type="text" class="form-control" placeholder="Seach your favorites here...">
-                  </div>
-                      <button class="btn bg-dark" style="color:lightblue">Click to search!</button>
-                </form>
-              </div>
-          </div>      
-        </div>
+      
+      <div class="col-4">
+        <div class="card border-dark mt-4">
+          <div class="card-header bg-dark text-center" style="color:lightblue"><h4>Search</h4></div>
+            <div class="card-body">          
+              <form id="create-form" class="text-center p-3">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Seach your favorites here...">
+                </div>
+                    <button class="btn bg-dark" style="color:lightblue" id="searchbox" id="create-submit">Click to search!</button>
+              </form>
+            </div>
+        </div>      
+      </div>
 
     </div>
   </div>
