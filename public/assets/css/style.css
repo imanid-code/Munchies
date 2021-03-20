@@ -56,3 +56,9 @@ body {
   font-size: 30px;
   color: blue;
 }
+
+.mainBody{
+  background-image: url("../img/restauranthome.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
