@@ -1,43 +1,54 @@
 {{> nav/nav-block}}
 
-<div id="home">
-  <div class="container">
-    <div class="row">
-      <div class="col-8 offset-2">
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <h2 style="color: brown; font-size: 40px; text-align:center">Add A New Restaurant</h2>
-            <label style="color: brown; font-size: 25px;" for="restaurant-name"><b>Restaurant Name:</b></label>
-            <input type="text" id="restaurant-name" class="form-control" aria-describedby="restaurant-name"
-              placeholder="Enter restaurant name">
-         <br>
-          <div class="form-group">
-            <label style="color: brown; font-size: 25px;" for="restaurant-description"><b>Restaurant
-                Description:</b></label>
+<body id="home">
 
+  <div class="container pt-5">
+    <div class="row">
+
+      <div class="col-6">
+        <div class="card border-dark mt-4">            
+          <div class="card-header bg-dark text-center" style="color:lightblue"><h4>Add New Restaurant</h4></div>
+        
+          <div class="form-group pt-3 pl-3">
+            <label style="font-size: 25px;" for="restaurant-name"><b>Name</b></label>
+            <input type="text" id="restaurant-name" class="form-control" aria-describedby="restaurant-name"
+              placeholder="Enter Restaurant Name...">
+          </div>
+
+          <div class="form-group pl-3">
+            <label style="font-size: 25px;" for="restaurant-description"><b>Description</b></label>
             <textarea class="form-control" id="restaurant-description" aria-describedby="restaurant-description"
-              placeholder="Enter restaurant description"></textarea>
+              placeholder="Enter Restaurant Description..."></textarea>
           </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-        <div>
-          <h4 id="belong">Saved Restaurants:</h4>
-          <ul id="restaurant-list" class="list-group">
-            {{#each restaurants}}
-            <li data-id="{{this.id}}" class="list-group-item">
-              <a href="restaurant/{{this.id}}">{{this.name}}</a>
-              <button class="btn btn-danger float-right delete">ｘ</button>
-            </li>
-            {{/each}}
-          </ul>
-           </div>
+
+          <div class="text-center pb-3">    
+          <button class="btn bg-dark text-center" style="color:lightblue" id="submit">Save Restaurant</button>
           </div>
+
+        </div>
+      </div>  
+
+      <div class="col-6">
+        <div class="card border-dark mt-4">            
+          <div class="card-header bg-dark text-center" style="color:lightblue"><h4>Saved Restaurants</h4></div>
+            <div>
+                <ul id="restaurant-list" class="list-group">
+                  {{#each restaurants}}
+                  <li data-id="{{this.id}}" class="list-group-item">
+                    <div style="font-size: 22px;">
+                    <a href="restaurant/{{this.id}}">{{this.name}}</a>
+                    <button class="btn btn-danger float-right delete">ｘ</button>
+                    </div>
+                  </li>
+                  {{/each}}
+                </ul>
+            </div>  
         </div>
       </div>
-    </div>
-  </div>
-</div>
 
+    </div>  
+  </div> 
+</body>
 
 <script src="/assets/js/restaurant.js"></script>
 
