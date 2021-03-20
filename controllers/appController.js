@@ -26,7 +26,6 @@ module.exports = function (db) {
     },
     // Creates a new Item
     createItem: function (req, res) {
-      console.log(req.body);
       db.Item.create(req.body).then(function (dbItem) {
         res.json(dbItem);
       });
