@@ -32,7 +32,8 @@ const API = {
 
 // refreshitems gets new items from the db and repopulates the list
 const refreshItems = function () {
-  const id = $('#item-list').data('restaurantId');
+  // console.log('');
+  const id = window.restaurantId;
   API.getItems(id).then(function (data) {
     const $items = data.map(function (item) {
       const $name = $('<span>')
