@@ -56,3 +56,24 @@ body {
   font-size: 30px;
   color: blue;
 }
+
+#profile{
+  background-image: url("../img/profile.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 230px;
+  padding-top: 50px;
+  margin-top: -25px;
+  margin-right: -10px;
+}
+.profilecontainer{
+ margin-left: 330px;
+ margin-top: 10px;
+ border: 3px solid purple;
+ width: 50%;
+ color: darkcyan;
+ padding-bottom: 30px;
+ background-color: white;
+text-align: center;
+
+}
