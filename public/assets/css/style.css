@@ -31,6 +31,14 @@ body {
   padding-left: 300px;
 }
 
+#home {
+  background-image: url(../img/restaurantpage.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 130px;
+  margin-right: -2px;
+}
+
 #belong {
   color: brown;
   font-weight: 800;
