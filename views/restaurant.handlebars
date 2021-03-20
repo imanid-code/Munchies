@@ -10,7 +10,7 @@
             <label style="color: brown; font-size: 25px;" for="restaurant-name"><b>Restaurant Name:</b></label>
             <input type="text" id="restaurant-name" class="form-control" aria-describedby="restaurant-name"
               placeholder="Enter restaurant name">
-          </div>
+         <br>
           <div class="form-group">
             <label style="color: brown; font-size: 25px;" for="restaurant-description"><b>Restaurant
                 Description:</b></label>
@@ -20,7 +20,9 @@
           </div>
           <button id="submit" class="btn btn-primary float-right">Submit</button>
         </form>
-        <div>
+        <br>
+        <br>
+        <br>
           <h4 id="belong">Restaurants belonging to this user:</h4>
           <ul id="restaurant-list" class="list-group">
             {{#each restaurants}}
@@ -30,6 +32,8 @@
             </li>
             {{/each}}
           </ul>
+           </div>
+          </div>
         </div>
       </div>
     </div>
