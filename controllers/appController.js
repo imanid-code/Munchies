@@ -35,6 +35,12 @@ module.exports = function (db) {
       db.Item.destroy({ where: { id: req.params.id } }).then(function (dbItem) {
         res.json(dbItem);
       });
+    },
+    // Gets item based on a searched name
+    getSearchedItem: function (req, res) {
+      db.Item.findOne({ where: { name: req.params.name } }).then(function (results) {
+        res.json(results);
+      });
     }
   };
 };
