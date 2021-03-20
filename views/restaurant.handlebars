@@ -8,33 +8,39 @@
           <div class="form-group">
             <h2 style="color: brown; font-size: 40px; text-align:center">Add A New Restaurant</h2>
             <label style="color: brown; font-size: 25px;" for="restaurant-name"><b>Restaurant Name:</b></label>
-            <input type="text" id="restaurant-name" class="form-control" aria-describedby="restaurant-name" placeholder="Enter restaurant name">
+            <input type="text" id="restaurant-name" class="form-control" aria-describedby="restaurant-name"
+              placeholder="Enter restaurant name">
           </div>
           <div class="form-group">
-            <label style="color: brown; font-size: 25px;" for="restaurant-description"><b>Restaurant Description:</b></label>
+            <label style="color: brown; font-size: 25px;" for="restaurant-description"><b>Restaurant
+                Description:</b></label>
 
-            <textarea class="form-control" id="restaurant-description" aria-describedby="restaurant-description" placeholder="Enter restaurant description"></textarea>
+            <textarea class="form-control" id="restaurant-description" aria-describedby="restaurant-description"
+              placeholder="Enter restaurant description"></textarea>
           </div>
           <button id="submit" class="btn btn-primary float-right">Submit</button>
         </form>
-        <h4 id="belong">Restaurants belonging to this user:</h4>
-        <ul id="restaurant-list" class="list-group">
-          {{#each restaurants}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="restaurant/{{this.id}}">{{this.name}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
+        <div>
+          <h4 id="belong">Restaurants belonging to this user:</h4>
+          <ul id="restaurant-list" class="list-group">
+            {{#each restaurants}}
+            <li data-id="{{this.id}}" class="list-group-item">
+              <a href="restaurant/{{this.id}}">{{this.name}}</a>
+              <button class="btn btn-danger float-right delete">ｘ</button>
+            </li>
+            {{/each}}
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
 
 <script src="/assets/js/restaurant.js"></script>
 
 {{> modal/login-block}}
 
 <script>
-  var userId = {{userInfo.id}};
+  var userId = {{ userInfo.id }};
 </script>
