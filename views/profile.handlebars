@@ -1,8 +1,9 @@
 {{> nav/nav-block user=true register=false}}
 <br>
-<div class="container" id="profile">
+<div id="profile">
+<div class="profilecontainer">
   <header align="center" class="header-wrap">
-    <h3>View or update your account:</h3>
+    <h3 style="margin-left: -20px; margin-bottom:30px;">View or update your account:</h3>
     <div class="userId">
       {{!-- <h3>Welcome, {{userInfo.firstName}}</h3> --}}
       {{!-- <h5 id="user-number" data-useremail="{{userInfo.email}}">Account email: {{userInfo.email}}</h5> --}}
@@ -14,31 +15,31 @@
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="inputFirst">First Name:</label>
-        <input type="text" class="form-control" id="inputFirst" value="{{userInfo.firstName}}" placeholder="John">
+        <input type="text" class="form-control" id="inputFirst" value="{{userInfo.firstName}}" placeholder="John" style="margin-left: 140px;">
       </div>
       <div class="form-group col-md-6">
         <label for="inputLast">Last Name:</label>
-        <input type="text" class="form-control" id="inputLast" value="{{userInfo.lastName}}" placeholder="Doe">
+        <input type="text" class="form-control" id="inputLast" value="{{userInfo.lastName}}" placeholder="Doe" style="margin-left: 140px;">
       </div>
     </div>
 
     <div class="form-row">
       <div class="form-group col-md-6">
-        <label for="inputPassword">Email:</label>
-        <input type="text" class="form-control" id="inputEmail" value="{{userInfo.email}}">
+        <label for="inputPassword" style="margin-left: -25px;">Email:</label>
+        <input type="text" class="form-control" id="inputEmail" value="{{userInfo.email}}" style="margin-left: 140px;">
       </div>
       <div class="form-group col-md-6">
-        <label for="inputPassword">New Password:</label>
-        <input type="password" class="form-control" id="inputPassword" value="{{userInfo.password}}">
+        <label for="inputPassword"style="margin-left: 25px;">New Password:</label>
+        <input type="password" class="form-control" id="inputPassword" value="{{userInfo.password}}" style="margin-left: 140px;">
       </div>
     </div>
 
     <div>
-      <button type="submit" id="update-user" data-id="{{userInfo.id}}" class="btn btn-primary">Update</button>
+      <button type="submit" id="update-user" data-id="{{userInfo.id}}" class="btn btn-primary" style="margin-left: -120px;">Update</button>
       {{#unless userInfo.isAdmin}}
-        <button type="submit" id="delete-user" class="btn btn-primary">Delete</button>
+        <button type="submit" id="delete-user" class="btn btn-primary" style="margin-left: 20px;">Delete</button>
       {{/unless}}
-      <button type="submit" id="view-user" data-id="{{userInfo.id}}" class="btn btn-primary">Refresh</button>
+      <button type="submit" id="view-user" data-id="{{userInfo.id}}" class="btn btn-primary" style="margin-left: 20px;">Refresh</button>
     </div>
   </form>
 
@@ -73,4 +74,5 @@
       </div>
     </div>
   </div>
+</div>
 </div>
