@@ -73,6 +73,7 @@
   margin-top: -25px;
   margin-right: -10px;
 }
+
 .profilecontainer{
  margin-left: 330px;
  margin-top: 10px;
@@ -84,9 +85,34 @@
 text-align: center;
 
 }
+
+.registercontainer{
+  background-image: url("../img/profile.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 230px;
+  padding-top: 50px;
+  margin-top: -25px;
+  margin-right: -10px;
+  padding-right: 750px;
+} 
+
+#register-form{
+  margin-left: 400px;
+  margin-top: 30px;
+  border: 3px solid purple;
+  color: darkcyan;
+  padding-bottom: 30px;
+  background-color: white;
+  text-align: center;
+  padding-right: 150px;
+  padding-left: 55px;
+}
+
 .ltBlue{
   color: lightblue;
 }
+
 .darkBlue{
   color:rgb(9, 9, 240);
   font-weight: bold;
