@@ -84,6 +84,29 @@
 text-align: center;
 
 }
+
+.registercontainer{
+  background-image: url("../img/profile.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 230px;
+  padding-top: 50px;
+  margin-top: -25px;
+  margin-right: -10px;
+  padding-right: 750px;
+}
+
+#register{
+  margin-left: 400px;
+ margin-top: 30px;
+ border: 3px solid purple;
+ color: darkcyan;
+ padding-bottom: 30px;
+ background-color: white;
+text-align: center;
+padding-right: 150px;
+padding-left: 55px;
+}
 .ltBlue{
   color: lightblue;
 }
