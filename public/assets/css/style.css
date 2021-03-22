@@ -85,6 +85,7 @@
 text-align: center;
 
 }
+
 .registercontainer{
   background-image: url("../img/profile.png");
   background-size: cover;
@@ -106,6 +107,12 @@ text-align: center;
 text-align: center;
 padding-right: 150px;
 padding-left: 55px;
-
-
+}
+.ltBlue{
+  color: lightblue;
+}
+.darkBlue{
+  color:rgb(9, 9, 240);
+  font-weight: bold;
+  font-size: 20px;
 }
