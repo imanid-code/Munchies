@@ -34,11 +34,9 @@
             <div>
                 <ul id="restaurant-list" class="list-group">
                   {{#each restaurants}}
-                  <li data-id="{{this.id}}" class="list-group-item">
-                    <div style="font-size: 22px;">
+                  <li data-id="{{this.id}}" class="list-group-item" style="font-size: 22px;">
                     <a href="restaurant/{{this.id}}">{{this.name}}</a>
                     <button class="btn btn-danger float-right delete">ｘ</button>
-                    </div>
                   </li>
                   {{/each}}
                 </ul>

@@ -41,6 +41,7 @@ const refreshRestaurants = function () {
       const $li = $('<li>')
         .attr({
           class: 'list-group-item',
+          style: 'font-size: 22px;',
           'data-id': restaurant.id
         })
         .append($a);
