@@ -54,7 +54,7 @@ const refreshItems = function () {
 
       const $li = $('<li>')
         .attr({
-          class: 'list-group-item',
+          class: 'list-group-item darkBlue',
           'data-id': item.id
         })
         .append($name)
@@ -113,12 +113,44 @@ const handleDeleteBtnClick = function (event) {
 const handleSearchBtnClick = function (event) {
   event.preventDefault();
 
-  // TODO: add a .toLowerCase() and make SQL search ignore case
   const name = $searchInput.val().trim();
 
-  API.searchItem(name).then(function (results) {
-    // TODO: Make results render as the only item in the item list
-    console.log(results);
+  API.searchItem(name).then(function (item) {
+    const $name = $('<span>')
+      .text(item.name);
+
+    const $br = $('<br>');
+
+    const $rating = $('<span>')
+      .text(item.rating + '/5');
+
+    const $li = $('<li>')
+      .attr({
+        class: 'list-group-item darkBlue',
+        'data-id': item.id
+      })
+      .append($name)
+      .append($br)
+      .append($rating);
+
+    const $button = $('<button>')
+      .addClass('btn btn-danger float-right delete')
+      .text('ｘ');
+
+    $li.append($button);
+
+    $itemList.empty();
+    $itemList.append($li);
+
+    const $seeAllButton = $('<button>')
+      .addClass('btn btn-primary float-right')
+      .text('See All Items');
+
+    $seeAllButton.on('click', refreshItems);
+
+    $itemList.append($seeAllButton);
+
+    $searchInput.val('');
   });
 };
 
