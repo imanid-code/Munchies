@@ -5,9 +5,9 @@
   <div class="container">
     <div class="row rowcenter pt-5 pl-5">
 
-     <div class="col-4">
+     <div class="col-md-4 col-xs-12">
         <div class="card border-dark mt-4">
-          <div class="card-header bg-dark text-center" style="color:lightblue"><h4>Favorite Foods & Drinks</h4></div>
+          <div class="card-header bg-dark text-center ltBlue"><h4>Favorite Foods & Drinks</h4></div>
             <div class="card-body"> 
               <form id="create-form" class="text-center">
                 <div class="form-group">                  
@@ -23,12 +23,12 @@
                     </select>
                   <br>
                   <br>
-                  <button class="btn bg-dark text-center" style="color:lightblue" id="create-submit">Add to favorites!</button>
+                  <button class="btn bg-dark text-center ltBlue" id="create-submit">Add to favorites!</button>
                 </div>
               </form>              
                 <ul id="item-list" class="list-group">
                   {{#each items}}
-                  <li data-id="{{this.id}}" class="list-group-item">
+                  <li data-id="{{this.id}}" class="list-group-item darkBlue">
                     <span>{{this.name}}</span>
                     <br>
                     <span>{{this.rating}}/5</span>
@@ -40,9 +40,9 @@
         </div>
       </div>
       
-      <div class="col-4">
+      <div class="col-md-4 col-xs-12">
         <div class="card border-dark mt-4">
-          <div class="card-header bg-dark text-center" style="color:lightblue"><h4>Restaurant</h4></div>
+          <div class="card-header bg-dark text-center ltBlue"><h4>Restaurant</h4></div>
             <div class="card-body">          
               <p>
                 <strong>ID</strong>: {{restaurant.id}}</p>
@@ -55,15 +55,15 @@
         </div>
       </div>
       
-      <div class="col-4">
+      <div class="col-md-4 col-xs-12">
         <div class="card border-dark mt-4">
-          <div class="card-header bg-dark text-center" style="color:lightblue"><h4>Search</h4></div>
+          <div class="card-header bg-dark text-center ltBlue"><h4>Search</h4></div>
             <div class="card-body">          
               <form id="create-form" class="text-center p-3">
                 <div class="input-group mb-3">
                     <input id="search-input" type="text" class="form-control" placeholder="Seach your favorites here...">
                 </div>
-                    <button id="search-submit" class="btn bg-dark" style="color:lightblue">Click to search!</button>
+                    <button id="search-submit" class="btn bg-dark ltBlue">Click to search!</button>
               </form>
             </div>
         </div>      
@@ -73,7 +73,7 @@
   </div>
 
   <div class="text-center pt-5 pl-5">
-      <button class="btn btn-lg bg-dark" type="submit" style="color:lightblue">
+      <button class="btn btn-lg bg-dark ltBlue" type="submit">
       <a href="/restaurant"><div class="linkbtn">Back to Restaurant Page</div></a>
       </button>
   </div>

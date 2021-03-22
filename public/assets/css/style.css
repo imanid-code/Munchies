@@ -88,3 +88,11 @@ body {
 text-align: center;
 
 }
+.ltBlue{
+  color: lightblue;
+}
+.darkBlue{
+  color:rgb(9, 9, 240);
+  font-weight: bold;
+  font-size: 20px;
+}
