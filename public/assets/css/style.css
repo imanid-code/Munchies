@@ -66,17 +66,18 @@
 
 #profile{
   background-image: url("../img/profile.png");
-  background-size: cover;
+  background-size: 110%;
   background-repeat: no-repeat;
-  padding-bottom: 230px;
+
+  /* padding-bottom: 230px;
   padding-top: 50px;
   margin-top: -25px;
-  margin-right: -10px;
+  margin-right: -10px; */
 }
 
 .profilecontainer{
-  margin-left: 330px;
-  margin-top: 10px;
+  margin: auto;
+  margin-top: 3%;
   border: 3px solid purple;
   width: 50%;
   color: darkcyan;
@@ -102,6 +103,7 @@
   padding-left: 100px;
   max-width: 50%;
   margin: auto;
+  margin-top: 3%;
 }
 
 .ltBlue {
@@ -115,5 +117,5 @@
 }
 
 .restaurantcard{
-  font-size: 22px;
+  font-size: 26px;
 }
