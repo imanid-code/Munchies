@@ -143,7 +143,7 @@ const handleSearchBtnClick = function (event) {
     $itemList.append($li);
 
     const $seeAllButton = $('<button>')
-      .addClass('btn btn-primary float-right')
+      .addClass('btn bg-dark ltBlue float-right')
       .text('See All Items');
 
     $seeAllButton.on('click', refreshItems);
